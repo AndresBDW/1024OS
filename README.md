@@ -14,11 +14,11 @@ Este proyecto es un experimento de desarrollo de sistemas operativos desde cero,
 - **Simple** → Una terminal simple, tenemos planeado hacer una GUI.  
 
 ## Requisitos
-- CPU: Intel 80386 (i386)
-- RAM: 2MB (o hasta menos)
+- **CPU:** Intel 80386 (i386)
+- **RAM:** 2MB (o hasta menos)
 - Al menos un **CD de 1MB** (no hemos probado usar el sistema con un pendrive, ni disquete.)
-- BIOS: Legacy (UEFI no funciona)
-- Monitor: Compatible con VGA
+- **BIOS:** Legacy (UEFI no funciona)
+- **Monitor:** Compatible con VGA
 
 ## Dependencias
  - nasm
@@ -58,7 +58,7 @@ xorriso -as mkisofs -o 1024OS.iso -b isolinux.bin -c boot.cat -no-emul-boot -boo
 rm *.o
 ```
 
-**o, simplemente, usar el script "build.sh".*
+**o, simplemente, usar el script "build.sh".**
 
 ---
 
