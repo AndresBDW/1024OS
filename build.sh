@@ -16,10 +16,7 @@ echo "3. Actualizando imagen en $ISO_DIR..."
 mv $KERNEL_NAME $ISO_DIR/ > /dev/null 2>&1
 
 echo "4. Generando 1024OS.iso..."
-xorriso -as mkisofs -o 1024OS.iso \ > /dev/null 2>&1
-   -b isolinux.bin -c boot.cat \ > /dev/null 2>&1
-   -no-emul-boot -boot-load-size 4 -boot-info-table \ > /dev/null 2>&1
-   $ISO_DIR > /dev/null 2>&1
+xorriso -as mkisofs -o 1024OS.iso -b isolinux.bin -c boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table $ISO_DIR > /dev/null 2>&1
 
 echo "5. Limpiando archivos temporales..."
 rm *.o > /dev/null 2>&1
