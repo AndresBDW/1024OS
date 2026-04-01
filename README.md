@@ -51,7 +51,7 @@ mv pavilionix86.bin ISO
 ```
  6) Generar la ISO:
 ```bash
-xorriso -as mkisofs -o 1024.iso -b isolinux.bin -c boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table ISO
+xorriso -as mkisofs -o 1024.iso -b pavilionix86.bin -c boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table ISO
 ```
  7) Limpiar archivos temporales:
 ```bash
