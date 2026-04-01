@@ -20,44 +20,45 @@ Este proyecto es un experimento de desarrollo de sistemas operativos desde cero,
 - BIOS: Legacy (UEFI no funciona)
 - Monitor: Compatible con VGA
 
-## Compilar
-- Dependencias:
+## Dependencias
  - nasm
  - gcc
  - binutils
  - xorriso / mtools
  (Busca como instalarlos en tu distribucion, yo uso Arch y me va bien.)
 
-- Como compilar:
+## Compilar
  1) Clonar el repositorio:
-'''bash
+```bash
 git clone https://github.com/AndresBDW/1024OS.git
 cd 1024OS
-'''
+```
  2) Compilar el boot.asm:
-'''bash
+```bash
 nasm -f elf32 boot.asm -o boot.o
-'''
+```
  3) Compilar el binario:
-'''bash
+```bash
 gcc -m32 -ffreestanding -fno-pic -fno-stack-protector -c kernel.c -o kernel.o
-'''
+```
  4) Enlazar el kernel:
-'''bash
+```bash
 ld -m elf_i386 -T linker.ld boot.o kernel.o -o pavilionix86.bin
-'''
+```
  5) Mover el kernel compilado a la carpeta ISO:
-'''bash
+```bash
 mv pavilionix86.bin ISO
-'''
+```
  6) Generar la ISO:
-'''bash
+```bash
 xorriso -as mkisofs -o 1024.iso -b isolinux.bin -c boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table ISO
-'''
+```
  7) Limpiar archivos temporales:
-'''bash
+```bash
 rm *.o
-'''
+```
 
-"o, simplemente, usar el script "build.sh"."
+**o, simplemente, usar el script "build.sh".*
+
+---
 
